@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giới thiệu - QUÂN LAN MOBILE</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+        
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gioithieu.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+	<script src="js/dungchung.js"></script>
+    <script>
+        window.onload = function () {
+            khoiTao();
+            // thêm tags (từ khóa) vào khung tìm kiếm
+            var tags = ["Samsung", "iPhone", "Huawei", "Oppo", "Mobi"];
+            for (var t of tags) addTags(t, "index.html?search=" + t);
+        }
+    </script>
+
+</head>
+
+<body>
+    <script> addTopNav();</script>
+
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+
+        <div class="page-gt">
+            <h4 class="page-header">
+                🏪 THÔNG TIN CHÍNH THỨC – QUÂN LAN MOBILE
+            </h4>
+            <div class="page-info">
+                <h3>1. Tên cửa hàng</h3>
+                <p><strong>QUÂN LAN MOBILE</strong></p>
+
+                <h3>2. Chủ cửa hàng</h3>
+                <p>
+                    <strong>Tên:</strong> Quân Lan<br>
+                    <strong>Ngày sinh:</strong> 24/06/1996<br>
+                    <strong>Nghề nghiệp:</strong> Kinh doanh điện thoại
+                </p>
+
+                <h3>3. Địa chỉ &amp; Liên hệ</h3>
+                <p>
+                    <strong>Địa chỉ:</strong> Đồng Bàu 2, Bình Minh, Nghệ An<br>
+                    <strong>Hotline:</strong> <a href="tel:0876008333">0876 008 333</a><br>
+                    <strong>Email:</strong> <a href="mailto:quanlanmobile@gmail.com">quanlanmobile@gmail.com</a><br>
+                    <strong>Giờ mở cửa:</strong> 8h00 – 21h30 (Tất cả các ngày)
+                </p>
+
+                <h3>4. Lĩnh vực kinh doanh</h3>
+                <ul>
+                    <li>iPhone chính hãng</li>
+                    <li>Samsung chính hãng</li>
+                    <li>Oppo</li>
+                    <li>Xiaomi</li>
+                    <li>Phụ kiện điện thoại</li>
+                </ul>
+
+                <h3>5. Chính sách bán hàng</h3>
+                <ul>
+                    <li>Hàng chính hãng 100%</li>
+                    <li>Trả góp 0%</li>
+                    <li>Thu cũ đổi mới</li>
+                    <li>Bảo hành 12 tháng</li>
+                    <li>1 đổi 1 trong 7 ngày nếu lỗi nhà sản xuất</li>
+                </ul>
+
+                <h3>6. Thống kê nổi bật</h3>
+                <ul>
+                    <li><strong>10.000+ sản phẩm</strong> đã bán</li>
+                    <li><strong>5.500+ khách hàng</strong> theo dõi</li>
+                    <li><strong>4.9⭐</strong> đánh giá trung bình</li>
+                    <li><strong>98%</strong> khách hàng hài lòng</li>
+                </ul>
+
+                <h3>7. Khẩu hiệu</h3>
+                <p>
+                    <strong>Uy tín – Chất lượng – Giá tốt</strong><br>
+                    <em>Quân Lan Mobile – Uy tín tạo nên thương hiệu</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script> addContainTaiKhoan(); addPlc(); </script>
+
+    <div class="footer">
+        <script>addFooter();</script>
+        
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>

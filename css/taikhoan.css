@@ -1,0 +1,248 @@
+/* START LOGIN MODAL FIX */
+.containTaikhoan {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.containTaikhoan.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.taikhoan {
+  background: #fff;
+  padding: 30px 40px;
+  width: 420px;
+  max-width: 90%;
+  margin: 0;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  font-family: inherit;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.containTaikhoan.show .taikhoan {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.taikhoan .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+  background: #f5f5f5;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.taikhoan .close:hover {
+  background: #d70018;
+  color: #fff;
+  transform: scale(1.1);
+}
+/* END LOGIN MODAL FIX */
+
+.taikhoan,
+.taikhoan * {
+  box-sizing: border-box;
+  /* box sizing cho .taikhoan và mọi thằng trong .taikhoan */
+}
+
+.taikhoan a {
+  text-decoration: none;
+  color: #1565c0;
+  transition: .25s ease;
+}
+
+.taikhoan a:hover {
+  color: #0d47a1;
+}
+
+.tab-group {
+  /* khung chọn log in, sign up */
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  /* sửa lỗi mất height do float */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group li a {
+  display: block;
+  padding: 14px;
+  background: #f5f5f5;
+  color: #666;
+  font-size: 1.05rem;
+  font-weight: 600;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .25s ease;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab-group li a:hover {
+  background: rgba(21, 101, 192, 0.12);
+  color: #1565c0;
+}
+
+.tab-group .active a {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  color: #fff;
+}
+
+.tab-content>div {
+  display: block;
+}
+
+.tab-content>div:last-child {
+  display: none;
+  /* ẩn signup (last-child của tab-content) lúc mới vào web */
+}
+
+.taikhoan h1 {
+  text-align: center;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin: 0 0 32px;
+}
+
+.taikhoan label {
+  position: absolute;
+  -webkit-transform: translateY(8px);
+  transform: translateY(8px);
+  left: 14px;
+  color: #999;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+.taikhoan label .req {
+  margin: 2px;
+  color: #1565c0;
+}
+
+.taikhoan label.active {
+  -webkit-transform: translateY(-26px);
+  transform: translateY(-26px);
+  left: 4px;
+  font-size: 0.85rem;
+}
+
+.taikhoan label.active .req {
+  opacity: 0;
+}
+
+.taikhoan label.highlight {
+  color: #1565c0;
+}
+
+.taikhoan input,
+.taikhoan textarea {
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 14px;
+  background: #f8f8f8;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  border-radius: 10px;
+  transition: border-color .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.taikhoan input:focus,
+.taikhoan textarea:focus {
+  outline: 0;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.15);
+  background: #fff;
+}
+
+.taikhoan textarea {
+  border: 1px solid #e0e0e0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-row>div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.top-row>div:last-child {
+  margin: 0;
+}
+
+.taikhoan .button {
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(21, 101, 192, 0.35);
+}
+
+.taikhoan .button:hover,
+.taikhoan .button:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(21, 101, 192, 0.4);
+}
+
+.taikhoan .button-block {
+  display: block;
+  width: 100%;
+}
+
+.taikhoan .forgot {
+  margin-top: -20px;
+  text-align: right;
+}

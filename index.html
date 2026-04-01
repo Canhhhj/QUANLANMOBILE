@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>QUÂN LAN MOBILE</title>
+	<link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+	<!-- Load font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	 crossorigin="anonymous">
+
+	<!-- owl carousel libraries -->
+	<link rel="stylesheet" href="js/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="js/owlcarousel/owl.theme.default.min.css">
+	<script src="js/Jquery/Jquery.min.js"></script>
+	<script src="js/owlcarousel/owl.carousel.min.js"></script>
+
+	<!-- START ADMIN COMMERCIAL AUDIT - DYNAMIC PATHING -->
+	<script>window.PATH_PREFIX = '';</script>
+	<!-- END ADMIN COMMERCIAL AUDIT - DYNAMIC PATHING -->
+
+	<!-- tidio - live chat -->
+	<!-- <script src="//code.tidio.co/bfiiplaaohclhqwes5xivoizqkq56guu.js"></script> -->
+
+	<!-- our files -->
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/topnav.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/banner.css">
+	<link rel="stylesheet" href="css/taikhoan.css">
+	<link rel="stylesheet" href="css/trangchu.css">
+	<link rel="stylesheet" href="css/home_products.css">
+	<link rel="stylesheet" href="css/pagination_phantrang.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- js -->
+	<script src="data/products.js"></script>
+	<script src="js/classes.js"></script>
+	<script src="js/dungchung.js"></script>
+	<script src="js/trangchu.js"></script>
+
+</head>
+
+<body>
+	<script> addTopNav(); </script>
+
+	<section>
+		<script> addHeader(); </script>
+
+		<div class="banner">
+			<div class="owl-carousel owl-theme"></div>
+		</div> <!-- End Banner -->
+
+		<img src="assets/img/banners/blackFriday.gif" alt="" class="banner-extra">
+
+		<div class="content-wrap">
+			<nav id="breadcrumb-wrap" class="breadcrumb-wrap"></nav>
+			<div class="page-title-block">
+				<h1 class="page-title"># Điện thoại</h1>
+				<p class="page-title-desc">Điện thoại chính hãng, giá tốt, trả góp 0%</p>
+			</div>
+			<div class="companyMenu group flexContain"></div>
+
+			<!-- Chọn theo nhu cầu (CellphoneS) -->
+			<div class="nhu-cau-section">
+				<h3 class="nhu-cau-title">Chọn theo nhu cầu</h3>
+				<div class="nhu-cau-tags">
+					<a href="index.html?group=noi_bat_nhat">Điện thoại chơi game</a>
+					<a href="index.html?group=gia_re">Điện thoại pin trâu</a>
+					<a href="index.html?search=5G">Điện thoại 5G</a>
+					<a href="index.html?search=camera">Chụp ảnh đẹp</a>
+					<a href="index.html?promo=moiramat">Điện thoại gập</a>
+					<a href="index.html?promo=tragop">Trả góp 0%</a>
+					<a href="index.html?group=gia_re">Điện thoại phổ thông</a>
+				</div>
+			</div>
+
+			<!-- Sắp xếp theo + Bộ lọc (CellphoneS) -->
+			<div class="sort-and-filter-bar">
+				<div class="sort-tabs" id="sort-tabs">
+					<span class="sort-label">Sắp xếp theo</span>
+					<a href="index.html" class="sort-tab active">Phổ biến</a>
+					<a href="index.html?sort=rateCount-decrease" class="sort-tab">Khuyến mãi HOT</a>
+					<a href="index.html?sort=price-ascending" class="sort-tab">Giá Thấp - Cao</a>
+					<a href="index.html?sort=price-decrease" class="sort-tab">Giá Cao - Thấp</a>
+				</div>
+				<button type="button" class="btn-bo-loc" id="btn-bo-loc" onclick="toggleFilterPanel()"><i class="fa fa-filter"></i> Bộ lọc</button>
+			</div>
+
+			<!-- Panel bộ lọc (slide) -->
+			<div class="filter-panel-overlay" id="filter-panel-overlay" onclick="toggleFilterPanel()"></div>
+			<div class="filter-panel" id="filter-panel">
+				<div class="filter-panel-header">
+					<h3>Bộ lọc</h3>
+					<button type="button" class="filter-panel-close" onclick="toggleFilterPanel()">&times;</button>
+				</div>
+				<div class="filter-panel-body">
+					<div class="filter-panel-group">
+						<h4>Khoảng giá</h4>
+						<div class="pricesRangeFilter dropdown"><button class="dropbtn">Chọn mức giá</button><div class="dropdown-content"></div></div>
+					</div>
+					<div class="filter-panel-group">
+						<h4>Trạng thái hàng</h4>
+						<a href="index.html" class="filter-chip">Sẵn hàng</a>
+						<a href="index.html?promo=moiramat" class="filter-chip">Hàng mới về</a>
+					</div>
+					<div class="filter-panel-group">
+						<h4>Khuyến mãi</h4>
+						<div class="promosFilter dropdown"><button class="dropbtn">Chọn khuyến mãi</button><div class="dropdown-content"></div></div>
+					</div>
+					<div class="filter-panel-group">
+						<h4>Số sao</h4>
+						<div class="starFilter dropdown"><button class="dropbtn">Chọn số sao</button><div class="dropdown-content"></div></div>
+					</div>
+				</div>
+				<div class="filter-panel-footer">
+					<button type="button" class="btn-close-panel" onclick="toggleFilterPanel()">Đóng</button>
+					<a href="index.html" class="btn-view-result">Xem kết quả</a>
+				</div>
+			</div>
+
+			<div class="filter-bar flexContain" style="margin-top:0.5rem;">
+				<div class="pricesRangeFilter dropdown">
+					<button class="dropbtn">Giá tiền</button>
+					<div class="dropdown-content"></div>
+				</div>
+				<div class="promosFilter dropdown">
+					<button class="dropbtn">Khuyến mãi</button>
+					<div class="dropdown-content"></div>
+				</div>
+				<div class="starFilter dropdown">
+					<button class="dropbtn">Số lượng sao</button>
+					<div class="dropdown-content"></div>
+				</div>
+				<div class="sortFilter dropdown">
+					<button class="dropbtn">Sắp xếp</button>
+					<div class="dropdown-content"></div>
+				</div>
+			</div>
+
+			<div class="choosedFilter flexContain">
+				<a id="deleteAllFilter" style="display: none;">
+					<h3>Xóa bộ lọc</h3>
+				</a>
+			</div>
+
+			<!-- Khi có bộ lọc mới hiện -->
+			<div class="contain-products" style="display:none">
+				<div class="filterName">
+					<input type="text" placeholder="Lọc trong trang theo tên..." onkeyup="filterProductsName(this)">
+				</div>
+				<ul id="products" class="homeproduct group flexContain">
+					<div id="khongCoSanPham">
+						<i class="fa fa-times-circle"></i>
+						Không có sản phẩm nào
+					</div>
+				</ul>
+				<div class="pagination"></div>
+			</div>
+
+			<div class="contain-khungSanPham"></div>
+
+			<!-- Bình luận / Đánh giá (kiểu CellphoneS) -->
+			<div class="comments-section">
+				<h3 class="comments-section-title"><i class="fa fa-comments-o"></i> Đánh giá & Bình luận</h3>
+				<p class="comments-section-desc">Khách hàng nói gì về QUÂN LAN MOBILE</p>
+				<div class="comments-list">
+					<div class="comment-item">
+						<div class="comment-avatar"><i class="fa fa-user"></i></div>
+						<div class="comment-body">
+							<div class="comment-meta">
+								<span class="comment-author">Nguyễn Văn A</span>
+								<span class="comment-date">02/03/2025</span>
+								<div class="comment-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+							</div>
+							<p class="comment-text">Mua iPhone 15 tại shop, nhân viên tư vấn nhiệt tình, giao hàng nhanh. Sản phẩm chính hãng, đóng gói cẩn thận. Sẽ ủng hộ lâu dài!</p>
+						</div>
+					</div>
+					<div class="comment-item">
+						<div class="comment-avatar"><i class="fa fa-user"></i></div>
+						<div class="comment-body">
+							<div class="comment-meta">
+								<span class="comment-author">Trần Thị B</span>
+								<span class="comment-date">28/02/2025</span>
+								<div class="comment-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div>
+							</div>
+							<p class="comment-text">Trả góp 0% mua Samsung S24, thủ tục nhanh gọn. Giá tốt hơn nhiều nơi, bảo hành rõ ràng. Rất hài lòng.</p>
+						</div>
+					</div>
+					<div class="comment-item">
+						<div class="comment-avatar"><i class="fa fa-user"></i></div>
+						<div class="comment-body">
+							<div class="comment-meta">
+								<span class="comment-author">Lê Văn C</span>
+								<span class="comment-date">25/02/2025</span>
+								<div class="comment-stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+							</div>
+							<p class="comment-text">Shop uy tín, mua Oppo Find X7 bên này yên tâm. Giao đúng hẹn, hỗ trợ đổi trả nhanh khi cần. Recommend!</p>
+						</div>
+					</div>
+				</div>
+				<div class="comments-cta">
+					<a href="./lienhe.html" class="btn-write-comment" title="Chuyển đến trang Liên hệ" target="_self"><i class="fa fa-pencil"></i> Gửi đánh giá / Liên hệ</a>
+				</div>
+			</div>
+		</div>
+
+	</section> <!-- End Section -->
+
+	<script>
+		addContainTaiKhoan(); addPlc();
+	</script>
+
+	<div class="footer"><script>addFooter();</script></div>
+</body>
+
+</html>

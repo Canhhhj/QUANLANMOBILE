@@ -1,0 +1,252 @@
+/* ========== Trang người dùng - Giao diện mới ========== */
+.nd-section {
+    min-height: 85vh;
+}
+
+.nd-banner {
+    display: block;
+}
+
+.nd-page {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 0 16px 24px;
+}
+
+/* --- Thông tin khách hàng (card) --- */
+.nd-info-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.nd-info-card table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+    font-size: 15px;
+}
+
+.nd-info-card table th {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #288ad6, #1e88e5);
+    color: #fff;
+    text-align: center;
+}
+
+.nd-info-card table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.nd-info-card table tr:last-child {
+    border-bottom: none;
+}
+
+.nd-info-card table td {
+    padding: 12px 16px;
+    vertical-align: middle;
+}
+
+.nd-info-card table td:first-child {
+    font-weight: 600;
+    color: #333;
+    width: 180px;
+    text-align: right;
+}
+
+.nd-info-card input {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.nd-info-card input:focus {
+    outline: none;
+    border-color: #288ad6;
+}
+
+.nd-info-card input[readonly] {
+    border-color: #e0e0e0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.nd-info-card .fa-pencil {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #288ad6;
+    transition: background 0.2s, color 0.2s;
+    min-width: 36px;
+}
+
+.nd-info-card .fa-pencil:hover {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Dòng tổng tiền / số SP */
+.nd-info-card table tr.nd-summary-row td {
+    background: #f5f8fa;
+    font-weight: 600;
+    color: #1e88e5;
+}
+
+/* --- Khung đổi mật khẩu --- */
+#khungDoiMatKhau {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+#khungDoiMatKhau table {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+}
+
+#khungDoiMatKhau tr td {
+    padding: 6px 0;
+}
+
+#khungDoiMatKhau tr td div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+#khungDoiMatKhau.active tr td {
+    padding: 8px 0;
+}
+
+#khungDoiMatKhau.active td div {
+    max-height: 80px;
+}
+
+#khungDoiMatKhau input {
+    max-width: 280px;
+}
+
+#khungDoiMatKhau button {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#khungDoiMatKhau button:hover {
+    opacity: 0.9;
+}
+
+/* --- Danh sách đơn hàng --- */
+.nd-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nd-orders > h3 {
+    text-align: center;
+    color: #333;
+    font-size: 1.4em;
+    padding: 24px 16px;
+    margin: 0;
+}
+
+.nd-order-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+
+.nd-order-card .listSanPham {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 14px;
+}
+
+.nd-order-card .listSanPham th {
+    padding: 12px 14px;
+    text-align: left;
+    background: #f5f8fa;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nd-order-card .listSanPham th[colspan="6"] {
+    text-align: center;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    color: #fff;
+    font-size: 15px;
+}
+
+.nd-order-card .listSanPham td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.nd-order-card .listSanPham tr:last-child td {
+    border-bottom: none;
+}
+
+.nd-order-card .listSanPham .alignRight {
+    text-align: right;
+}
+
+.nd-order-card .listSanPham tr:last-child {
+    font-weight: 600;
+    background: #f0f7ff;
+    color: #1e88e5;
+}
+
+.nd-order-card .listSanPham tr:last-child td:last-child {
+    color: #2e7d32;
+}
+
+.nd-order-card .listSanPham .noPadding.imgHide a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nd-order-card .listSanPham .noPadding.imgHide img {
+    max-height: 40px;
+    width: auto;
+    border-radius: 6px;
+}
+
+/* Cảnh báo chưa đăng nhập */
+.nd-info-card h2.nd-warning,
+.nd-orders h3.nd-warning {
+    color: #c62828;
+    font-size: 1.3em;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.nd-orders h3.nd-success {
+    color: #2e7d32;
+}

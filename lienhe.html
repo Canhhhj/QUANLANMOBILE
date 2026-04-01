@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liên hệ - QUÂN LAN MOBILE</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/lienhe.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+    <script src="js/dungchung.js"></script>
+    <script src="js/lienhe.js"></script>
+
+</head>
+
+<body>
+    <script> addTopNav();</script>
+
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+        <!-- START SAFE NAVIGATION UPDATE -->
+        <div class="breadcrumb-wrapper">
+            <div id="breadcrumb-wrap"></div>
+            <a href="index.html" class="btn-back-home"><i class="fa fa-arrow-left"></i> Về trang chủ</a>
+        </div>
+        <script>
+            if(typeof renderBreadcrumb === 'function') renderBreadcrumb([{text:'Trang chủ', url:'index.html'}, {text:'Liên hệ', url:null}]);
+        </script>
+        <!-- END SAFE NAVIGATION UPDATE -->
+
+        <div class="body-lienhe">
+            <div class="lienhe-header">Liên hệ</div>
+            <div class="lienhe-info">
+                <div class="info-left">
+                    <p>
+                        <h2 style="color: gray"> QUÂN LAN MOBILE </h2><br />
+                        <b>Chủ cửa hàng:</b> Quân Lan (sinh ngày 24/06/1996) – Kinh doanh điện thoại<br /><br />
+                        <b>Địa chỉ:</b> Đồng Bàu 2, Bình Minh, Nghệ An<br /><br />
+                        <b>Hotline:</b> <a href="tel:0876008333">0876 008 333</a><br /><br />
+                        <b>Email:</b> <a href="mailto:quanlanmobile@gmail.com">quanlanmobile@gmail.com</a><br /><br />
+                        <b>Giờ mở cửa:</b> 8h00 – 21h30 (Tất cả các ngày)<br /><br />
+                        <b>Lĩnh vực kinh doanh:</b> iPhone chính hãng, Samsung chính hãng, Oppo, Xiaomi, phụ kiện điện thoại<br /><br />
+                        <b>Chính sách bán hàng:</b> Hàng chính hãng 100%, trả góp 0%, thu cũ đổi mới, bảo hành 12 tháng,
+                        1 đổi 1 trong 7 ngày nếu lỗi nhà sản xuất.<br /><br /><br />
+                        <b>Quý khách có thể gửi liên hệ tới chúng tôi bằng cách hoàn tất biểu mẫu dưới đây. Chúng tôi
+                            sẽ chủ động gọi lại hoặc phản hồi qua email trong thời gian sớm nhất. Hân hạnh phục vụ và chân thành
+                            cảm ơn sự quan tâm, đóng góp ý kiến đến Quân Lan Mobile.</b>
+                    </p>
+                </div>
+                <div class="info-right">
+                    <iframe width="100%" height="450"
+                        src="https://maps.google.com/maps?q=%C4%90%E1%BB%93ng+B%C3%A0u+2%2C+B%C3%ACnh+Minh%2C+Ngh%E1%BB%87+An&amp;output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                    <br />
+                </div>
+            </div>
+            <div class="lienhe-info lienhe-form-section">
+                <div class="guithongtin form-card">
+                    <div class="form-card-header">
+                        <span class="form-card-badge">Liên hệ</span>
+                        <h2 class="form-card-title">Gửi thông tin cho chúng tôi</h2>
+                        <p class="form-card-desc">Điền form bên dưới, chúng tôi sẽ phản hồi sớm nhất.</p>
+                    </div>
+                    <form name="formlh" class="form-lienhe" onsubmit="return nguoidung()">
+                        <div class="form-group">
+                            <label for="lh-hoten">Họ và tên</label>
+                            <input type="text" id="lh-hoten" name="ht" maxlength="40" placeholder="Nguyễn Văn A"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lh-sdt">Điện thoại</label>
+                                <input type="text" id="lh-sdt" name="sdt" maxlength="11" minlength="10"
+                                    placeholder="0912 345 678" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lh-email">Email</label>
+                                <input type="email" id="lh-email" name="em" placeholder="email@vd.com"
+                                    autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lh-tieude">Tiêu đề</label>
+                            <input type="text" id="lh-tieude" name="tde" maxlength="100"
+                                placeholder="Tiêu đề cần hỗ trợ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lh-noidung">Nội dung</label>
+                            <textarea id="lh-noidung" name="nd" rows="5" maxlength="500" wrap="physical"
+                                placeholder="Nội dung chi tiết..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fa fa-paper-plane"></i> Gửi thông tin liên hệ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        addContainTaiKhoan(); addPlc();
+    </script>
+
+    <div class="footer">
+        <script>
+            addFooter();
+        </script>
+
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+</body>
+
+</html>

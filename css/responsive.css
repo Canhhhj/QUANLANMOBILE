@@ -1,0 +1,156 @@
+/* START ADMIN MASTER POLISH - UNIFIED RESPONSIVE DESIGN */
+
+/* =======================================================
+   1. DESIGN TOKENS (Shared across breakpoints)
+   ======================================================= */
+:root {
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+/* =======================================================
+   2. TABLET & SMALL DESKTOP (≤ 1024px)
+   ======================================================= */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main {
+        width: calc(100% - 200px);
+    }
+}
+
+/* =======================================================
+   3. MOBILE LANDSCAPE & TABLET (≤ 768px)
+   ======================================================= */
+@media (max-width: 768px) {
+    /* ----- Admin Sidebar & Layout ----- */
+    .sidebar {
+        position: fixed;
+        left: -280px;
+        top: 0;
+        z-index: 9999;
+        height: 100vh;
+        width: 280px;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 9998;
+    }
+    .sidebar.show + .sidebar-overlay {
+        display: block;
+    }
+
+    .main {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 12px !important;
+    }
+
+    /* ----- Table to Card Transformation (Universal) ----- */
+    .table-outline { border: none !important; }
+    .table-header, .table-outline thead { display: none !important; }
+    
+    .table-outline tbody, 
+    .table-outline tr, 
+    .table-outline td { 
+        display: block !important; 
+        width: 100% !important; 
+    }
+
+    .table-outline tr {
+        background: var(--bg-card);
+        margin-bottom: 16px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-soft);
+        overflow: hidden;
+        border: 1px solid #edf2f7;
+    }
+
+    .table-outline td {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px !important;
+        border: none;
+        border-bottom: 1px solid #f7fafc !important;
+        font-size: 14px;
+        text-align: right !important;
+    }
+
+    .table-outline td:before {
+        content: attr(data-label) ":";
+        font-weight: 700;
+        color: var(--text-muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        text-align: left;
+        width: 100px;
+        flex-shrink: 0;
+    }
+
+    .table-outline td:last-child {
+        background: #f8fafc;
+        justify-content: center;
+        padding: 15px !important;
+    }
+
+    /* ----- Dashboard & UI Elements ----- */
+    .home-stats, .executive-checklist {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .home-charts .canvasContainer {
+        flex: 1 1 100% !important;
+    }
+
+    /* ----- User UI: Header & Search ----- */
+    .header.group {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        padding: 8px 12px !important;
+    }
+    .header .logo { flex: 1; order: 1; }
+    .tools-member { flex: 0 0 auto; order: 2; gap: 12px; }
+    .header .search-header { flex: 0 0 100%; order: 3; margin-top: 8px; width: 100%; }
+
+    /* Product Grid */
+    ul.homeproduct, ul#products {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 8px !important;
+        gap: 8px !important;
+    }
+
+    .sanPham { padding: 0 !important; }
+}
+
+/* =======================================================
+   4. SMALL MOBILE (≤ 480px)
+   ======================================================= */
+@media (max-width: 480px) {
+    .table-outline td {
+        font-size: 13px;
+        padding: 10px !important;
+    }
+    .table-outline td:before {
+        width: 80px;
+        font-size: 10px;
+    }
+    .header .logo-name { font-size: 14px !important; }
+}
+
+/* END ADMIN MASTER POLISH - UNIFIED RESPONSIVE DESIGN */

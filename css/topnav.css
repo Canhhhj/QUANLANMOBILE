@@ -1,0 +1,92 @@
+/* ========== START UI UPDATE ========== */
+.top-nav {
+	background: var(--primary);
+	width: 100%;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	backface-visibility: hidden;
+    color: #fff;
+}
+
+.top-nav section {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 5px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 36px;
+	gap: 12px 18px;
+	background: transparent !important;
+}
+
+.top-nav-promo {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px 15px;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #fff;
+	font-weight: 500;
+}
+
+.top-nav-promo span { color: rgba(255,255,255,0.9); }
+.top-nav-promo strong { font-weight: 700; color: #fff; }
+.top-nav-promo span:not(:last-child)::after {
+	content: "|";
+	margin-left: 15px;
+	color: rgba(255,255,255,0.4);
+	font-weight: 400;
+}
+
+.top-nav-right {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px 15px;
+}
+
+.top-nav-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #fff;
+	padding: 4px 8px;
+	border-radius: 6px;
+	transition: background 0.2s;
+}
+
+.top-nav-link:hover { background: rgba(255,255,255,0.1); }
+.top-nav-link i { font-size: 13px; color: #fff; }
+
+.top-nav-hotline {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+	font-weight: 700;
+	color: var(--primary);
+	padding: 4px 10px;
+	border-radius: 6px;
+	background: #fff;
+	text-decoration: none;
+	transition: background 0.2s;
+}
+
+.top-nav-hotline:hover { background: #f1f1f1; }
+.top-nav-hotline i { color: var(--primary); text-decoration: none;}
+
+.top-nav-quicklink { display: none; } /* Hide extra links on top for modern clean look */
+
+@media (max-width: 900px) {
+    .top-nav-promo { display: none; }
+    .top-nav section { justify-content: flex-end; }
+}
+
+@media (max-width: 768px) {
+	.top-nav section { padding: 4px 16px; min-height: 30px; justify-content: center; }
+}
+/* ========== END UI UPDATE ========== */

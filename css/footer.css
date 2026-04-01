@@ -1,0 +1,140 @@
+/* ========== START UI UPDATE ========== */
+.footer {
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid var(--border);
+	margin-top: 0;
+    color: var(--text-body);
+}
+
+.footer-main { width: 100%; }
+
+.footer-inner {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 3rem 24px;
+	display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr 1.2fr;
+	gap: 2.5rem;
+}
+
+.footer-col-group > div {
+	margin-bottom: 2rem;
+}
+.footer-col-group > div:last-child {
+	margin-bottom: 0;
+}
+
+
+.footer-hotline-block {
+	width: 100%;
+	padding: 1.5rem;
+	background: var(--bg-page);
+	border-radius: var(--radius);
+	margin-bottom: 1.5rem;
+}
+
+.footer-hotline-title {
+	font-size: 1.1rem;
+	color: var(--text-body);
+	font-weight: 800;
+	margin: 0 0 12px;
+	text-transform: uppercase;
+}
+
+.footer-hotline-block p {
+	margin: 8px 0;
+	font-size: 14px;
+	color: #555;
+}
+
+.footer-hotline-block a {
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: #d70018; /* Nổi bật số điện thoại */
+    text-decoration: none;
+}
+
+.footer-payment h4, .footer-newsletter h4, .footer-col h4 {
+	color: var(--text-body);
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin: 0 0 1.2rem;
+    padding-bottom: 5px;
+}
+
+.footer-payment-icons { display: flex; flex-wrap: wrap; gap: 8px; }
+.footer-payment-icons span {
+	padding: 6px 12px;
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--text-body);
+}
+
+.footer-newsletter p { font-size: 14px; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.6; }
+.footer-newsletter-form input {
+	width: 100%;
+	padding: 14px 16px;
+	margin-bottom: 12px;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	font-size: 14px;
+    outline: none;
+	transition: border-color 0.2s;
+}
+.footer-newsletter-form input:focus {
+	border-color: var(--primary);
+}
+.footer-newsletter-form button {
+	width: 100%;
+	padding: 14px;
+	background: var(--primary);
+	border: none;
+	border-radius: var(--radius);
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(215, 0, 24, 0.2);
+	transition: all 0.2s;
+}
+.footer-newsletter-form button:hover { 
+	background: var(--primary-dark); 
+	transform: translateY(-2px);
+	box-shadow: 0 6px 12px rgba(215, 0, 24, 0.3);
+}
+.footer-newsletter-form label { display: flex; align-items: flex-start; font-size: 13px; margin: 10px 0 15px; gap: 8px; color: #555; line-height: 1.5; cursor: pointer;}
+.footer-newsletter-form label input { width: auto; margin-top: 3px; cursor: pointer;}
+
+.footer-col { font-size: 14px; line-height: 1.8; color: var(--text-muted); }
+.footer-col a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover { color: var(--primary); text-decoration: underline;}
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin-bottom: 8px; }
+
+.copy-right {
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	font-size: 14px;
+	color: var(--text-muted);
+	background: var(--bg-page);
+	border-top: 1px solid var(--border);
+}
+
+.copy-right a { color: var(--primary); font-weight: 600; text-decoration: none;}
+.plc { display: none; } /* Hide old plc section for modern look */
+
+@media (max-width: 1024px) {
+	.footer-inner { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+	.footer-inner { grid-template-columns: 1fr; padding: 2rem 16px; gap: 2rem;}
+	.footer-col-group > div { margin-bottom: 2rem; }
+}
+/* ========== END UI UPDATE ========== */

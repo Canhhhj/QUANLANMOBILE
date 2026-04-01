@@ -1,0 +1,16 @@
+/* Banner */
+.banner {
+	background: linear-gradient(180deg, #f8fafc 0%, #e3f2fd 100%);
+	padding: 0;
+	border-bottom: 1px solid #bbdefb;
+	overflow: hidden;
+}
+
+.banner .owl-carousel .item img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 380px;
+	object-fit: cover;
+}
+/* ======= End Banner ======== */

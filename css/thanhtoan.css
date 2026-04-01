@@ -1,0 +1,306 @@
+/* ========== Trang thanh toán & địa chỉ - Giao diện mới ========== */
+.tt-container {
+    margin: 0 auto 50px;
+    max-width: 1100px;
+    padding: 0 16px;
+}
+
+.tt-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.tt-container .tt-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+}
+
+.tt-note {
+    font-size: 14px;
+    color: #5a5a5a;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.tt-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* --- Khối đơn hàng --- */
+.tt-summary {
+    flex: 1;
+    min-width: 0;
+}
+
+.tt-summary-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+
+.tt-summary-card h3 {
+    margin: 0;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #288ad6, #1e88e5);
+}
+
+.tt-summary-inner {
+    padding: 12px 16px 16px;
+}
+
+.tt-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tt-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #f5f8fa;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tt-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.tt-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tt-table .tt-total-row {
+    background: #f0f7ff;
+    font-weight: 600;
+    color: #1e88e5;
+}
+
+.tt-table .alignRight {
+    text-align: right;
+}
+
+/* --- Khối form địa chỉ & thanh toán --- */
+.tt-form-wrapper {
+    flex: 0 0 380px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+
+.tt-form-wrapper h3 {
+    margin: 0;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+}
+
+.tt-form-inner {
+    padding: 18px 20px 20px;
+}
+
+.tt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tt-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.tt-form-row label {
+    font-weight: 600;
+    color: #333;
+}
+
+.tt-form-row label span {
+    color: #d32f2f;
+}
+
+.tt-form-row input,
+.tt-form-row textarea {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.tt-form-row input:focus,
+.tt-form-row textarea:focus {
+    outline: none;
+    border-color: #288ad6;
+    box-shadow: 0 0 0 2px rgba(40, 138, 214, 0.2);
+}
+
+.tt-form-row textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+/* Phương thức thanh toán */
+.tt-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.tt-radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.tt-radio-group label:hover {
+    background: #f8fbff;
+    border-color: #288ad6;
+}
+
+.tt-radio-group input {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: #288ad6;
+}
+
+.tt-submit-btn {
+    margin-top: 6px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.tt-submit-btn:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+.tt-small {
+    margin: 8px 0 0;
+    font-size: 11px;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* ========== Modal QR ========== */
+.tt-qr-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.tt-qr-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tt-qr-content {
+    background: #fff;
+    max-width: 480px;
+    width: 90%;
+    border-radius: 12px;
+    padding: 22px 24px 20px;
+    position: relative;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.tt-qr-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+.tt-qr-close {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+}
+
+.tt-qr-close:hover {
+    color: #333;
+}
+
+.tt-qr-image-wrap {
+    text-align: center;
+    margin: 14px 0 12px;
+}
+
+.tt-qr-image-wrap img {
+    max-width: 240px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.tt-bank-info {
+    font-size: 13px;
+    margin-bottom: 14px;
+    padding: 12px;
+    background: #f5f8fa;
+    border-radius: 8px;
+}
+
+.tt-bank-info p {
+    margin: 4px 0;
+}
+
+.tt-upload-row input[type="file"] {
+    padding: 6px 0;
+}
+
+@media (max-width: 900px) {
+    .tt-layout {
+        flex-direction: column;
+    }
+
+    .tt-form-wrapper {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+}

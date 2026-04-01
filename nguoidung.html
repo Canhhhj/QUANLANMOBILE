@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>QUÂN LAN MOBILE</title>
+	<link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+	<!-- Load font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     crossorigin="anonymous">
+
+     <script src="js/Jquery/Jquery.min.js"></script>
+
+	<!-- our files -->
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/topnav.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/gioHang.css">
+    <link rel="stylesheet" href="css/nguoidung.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- js -->
+	<script src="data/products.js"></script>
+	<script src="js/classes.js"></script>
+    <script src="js/dungchung.js"></script>
+    <script src="js/nguoidung.js"></script>
+
+</head>
+
+<body>
+	<script> addTopNav(); </script>
+
+	<section class="nd-section">
+		<script> addHeader(); </script>
+        <!-- START SAFE NAVIGATION UPDATE -->
+        <div class="breadcrumb-wrapper">
+            <div id="breadcrumb-wrap"></div>
+            <a href="index.html" class="btn-back-home"><i class="fa fa-arrow-left"></i> Về trang chủ</a>
+        </div>
+        <script>
+            if(typeof renderBreadcrumb === 'function') renderBreadcrumb([{text:'Trang chủ', url:'index.html'}, {text:'Người dùng', url:null}]);
+        </script>
+        <!-- END SAFE NAVIGATION UPDATE -->
+        <img src="assets/img/banners/blackFriday.gif" alt="" class="nd-banner" style="width: 100%;">
+        <div class="nd-page">
+            <div class="infoUser nd-info-card"> </div>
+            <div class="listDonHang nd-orders"> </div>
+        </div>
+	</section> <!-- End Section -->
+
+	<script>
+		addContainTaiKhoan(); addPlc();
+	</script>
+
+	<div class="footer"><script>addFooter();</script></div>
+
+	<i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>

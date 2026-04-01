@@ -1,0 +1,22 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ql-light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#CFE9FF"/>
+      <stop offset="1" stop-color="#6CB5FF"/>
+    </linearGradient>
+    <linearGradient id="ql-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#022859"/>
+      <stop offset="1" stop-color="#001233"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Q -->
+  <path
+    d="M16 4C8.8203 4 3 9.8203 3 17C3 24.1797 8.8203 30 16 30C18.9038 30 21.5657 28.9695 23.6458 27.1458C25.726 25.3221 27 22.7643 27 20C27 12.8203 21.1797 7 14 7V11C18.9706 11 23 15.0294 23 20C23 23.3137 20.3137 26 17 26C12.5817 26 9 22.4183 9 18C9 13.5817 12.5817 10 17 10V4C16.6667 4 16.3333 4 16 4Z"
+    fill="url(#ql-light)"/>
+
+  <!-- L -->
+  <path
+    d="M30 11C30 9.89543 30.8954 9 32 9H37C42.5228 9 47 13.4772 47 19V26H57C58.1046 26 59 26.8954 59 28C59 29.1046 58.1046 30 57 30H38C33.5817 30 30 26.4183 30 22V11Z"
+    fill="url(#ql-dark)"/>
+</svg>
