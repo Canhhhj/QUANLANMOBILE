@@ -1,12 +1,9 @@
 /* ============================================================
-   QUÂN LAN MOBILE — responsive.css (OPTIMIZED FOR MOBILE & TABLET)
-   CHỈ CHỈNH MOBILE & TABLET - GIỮ NGUYÊN DESKTOP
+   QUÂN LAN MOBILE — responsive.css (REVERTED TO STABLE)
+   QUAY LẠI TRẠNG THÁI ỔN ĐỊNH TRƯỚC KHI ÉP TRÀN 100VW
    ============================================================ */
 
-/* 1. THIẾT LẬP CHUNG (GLOBAL) - KHÔNG ĐỔI */
-body { overflow-x: hidden !important; margin: 0 !important; }
-
-/* 2. BANNER MÀU TÍM TRÀN VIỀN */
+/* 1. BANNER MÀU TÍM TRÀN HẾT HAI BÊN MÀN HÌNH (KHÔNG HỞ LỀ) */
 .banner-extra {
     width: 100vw !important;
     margin-left: 50% !important;
@@ -24,106 +21,121 @@ body { overflow-x: hidden !important; margin: 0 !important; }
     border-radius: 0 !important;
 }
 
-/* 3. GIAO DIỆN MÁY TÍNH (DESKTOP > 1024px) - GIỮ NGUYÊN */
-@media (min-width: 1025px) {
-    .sanPham { flex: 0 0 calc(20% - 15px) !important; }
+/* 2. GIỮ PHẦN HÃNG (TIÊU ĐỀ BÊN TRÁI) */
+.companyMenu {
+    display: flex !important;
+    align-items: center !important;
+    background: #f1f1f1 !important;
+    padding: 15px 20px !important;
+    border-radius: 15px !important;
+    margin: 15px 0 !important;
 }
 
-/* 4. GIAO DIỆN TABLET (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .sanPham { 
-        flex: 0 0 calc(33.33% - 15px) !important; /* 3 cột cho Tablet */
-        margin-bottom: 20px !important;
-    }
-    .companyMenu { padding: 15px !important; }
-    .sort-tab { padding: 8px 15px !important; font-size: 0.85rem !important; }
+.companyMenu-title {
+    flex: 0 0 auto !important;
+    font-weight: bold !important;
+    margin-right: 20px !important;
+    color: #333 !important;
+    font-size: 1rem !important;
 }
 
-/* 5. GIAO DIỆN ĐIỆN THOẠI (MOBILE < 768px) */
-@media (max-width: 768px) {
-    /* --- HEADER MOBILE OPTIMIZATION --- */
-    .top-nav { display: none !important; /* Ẩn thanh promo nhỏ trên cùng */ }
-    
-    .header.group {
-        flex-direction: column !important; /* Xếp logo và search theo hàng dọc */
-        padding: 10px 0 !important;
-        gap: 10px !important;
-    }
-
-    .header-container { padding: 0 10px !important; }
-
-    .header .logo-name { font-size: 16px !important; }
-    .header .logo-tagline { display: none !important; }
-    .header .logo-circle { width: 36px !important; height: 36px !important; }
-
-    .header .content {
-        width: 100% !important;
-        flex-direction: column !important;
-        gap: 10px !important;
-    }
-
-    .search-header {
-        width: 100% !important;
-        max-width: none !important;
-        order: 2; /* Đẩy search xuống dưới logo */
-    }
-
-    form.input-search { height: 45px !important; } /* Làm search bar to hơn để dễ bấm */
-
-    .tools-member {
-        width: 100% !important;
-        justify-content: space-around !important;
-        order: 1;
-        padding-bottom: 5px !important;
-    }
-
-    .tools-member a {
-        font-size: 0 !important; /* Ẩn chữ 'Tài khoản', 'Giỏ hàng' */
-        padding: 8px !important;
-    }
-    .tools-member i { font-size: 24px !important; } /* Phóng to icon */
-    
-    .header-category { display: none !important; /* Ẩn nút Danh mục gốc để dùng Menu mobile nếu có */ }
-    .header-hotline { display: none !important; /* Ẩn hotline trên header mobile cho đỡ chật */ }
-
-    /* --- PRODUCT GRID MOBILE --- */
-    .sanPham { 
-        flex: 0 0 calc(50% - 10px) !important; 
-        margin: 5px !important;
-        padding: 12px !important;
-        border-radius: 12px !important;
-    }
-    .sanPham img { height: 160px !important; }
-    .sanPham h3 { font-size: 0.95rem !important; line-height: 1.3 !important; }
-    .sanPham .price { font-size: 1.1rem !important; color: #d70018 !important; }
-
-    /* --- NAVIGATION MOBILE --- */
-    .sort-label { display: none !important; }
-    .sort-and-filter-bar {
-        overflow-x: auto !important;
-        padding: 10px 0 !important;
-        gap: 8px !important;
-        justify-content: flex-start !important;
-    }
-    .sort-tabs { flex-wrap: nowrap !important; }
-    .sort-tab { padding: 8px 16px !important; font-size: 0.8rem !important; white-space: nowrap !important; }
-    .btn-bo-loc { padding: 8px 16px !important; font-size: 0.85rem !important; margin-left: 10px !important; }
+.companyMenu a {
+    flex: 1 !important;
+    background: #fff !important;
+    height: 45px !important;
+    margin: 0 3px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 }
 
-/* GIỮ CÁC STYLE KHÁC ĐÃ LÀM */
-.companyMenu { background: #f1f1f1 !important; border-radius: 15px !important; margin: 15px 0 !important; display: flex; }
-.companyMenu-title { font-weight: bold; color: #333; }
-.companyMenu a { background: #fff !important; height: 45px !important; margin: 0 3px !important; border-radius: 8px !important; display: flex; align-items: center; justify-content: center; }
 .companyMenu a img { max-height: 25px !important; }
 
-.choon-nhu-cau-title { font-weight: bold; margin: 20px 0 10px 0; font-size: 1rem; }
-.choon-nhu-cau { display: flex; flex-wrap: wrap; }
-.nhu-cau-item { background: #f8f9fa !important; border: 1px solid #eee !important; display: flex; align-items: center; gap: 8px; font-weight: 500; border-radius: 20px; }
-.nhu-cau-item i, .nhu-cau-item img { color: #d70018 !important; }
+/* 3. GIỮ PHẦN NHU CẦU ĐÃ LÀM ĐẸP */
+.choon-nhu-cau-title {
+    font-weight: bold !important;
+    margin: 20px 0 10px 0 !important;
+    font-size: 1rem !important;
+}
 
-.sort-and-filter-bar { display: flex; align-items: center; justify-content: space-between; }
-.sort-tabs { display: flex; align-items: center; }
-.sort-label { font-weight: 800; color: #333; }
-.sort-tab { text-decoration: none; transition: all 0.2s ease; border: 1px solid #eee; background: #fff; }
-.sort-tab.active { background: #d70018 !important; color: #fff !important; border-color: #d70018 !important; }
-.btn-bo-loc { border: 1.5px solid #d70018 !important; color: #d70018 !important; border-radius: 25px !important; font-weight: 800; background: #fff !important; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.choon-nhu-cau {
+    display: flex !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+}
+
+.nhu-cau-item {
+    background: #f8f9fa !important;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    border: 1px solid #eee !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+}
+
+.nhu-cau-item i, .nhu-cau-item img {
+    color: #d70018 !important;
+}
+
+/* KHỬ KHOẢNG TRẮNG BÊN PHẢI */
+body { overflow-x: hidden !important; }
+.sanPham { flex: 0 0 calc(20% - 15px) !important; }
+
+/* 4. THANH SẮP XẾP & BỘ LỌC */
+.sort-and-filter-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important; /* Đẩy bộ lọc sang phải */
+    padding: 15px 0 !important;
+    width: 100% !important;
+}
+
+.sort-tabs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.sort-label {
+    font-weight: 800 !important; /* In đậm chữ Sắp xếp theo */
+    margin-right: 10px !important;
+    color: #333 !important;
+    font-size: 1rem !important;
+}
+
+.sort-tab {
+    padding: 8px 20px !important;
+    border-radius: 25px !important; /* Dạng viên thuốc */
+    background: #fff !important;
+    border: 1px solid #eee !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    color: #555 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.sort-tab.active {
+    background: #d70018 !important;
+    color: #fff !important;
+    border-color: #d70018 !important;
+    box-shadow: 0 4px 10px rgba(215,0,24,0.2) !important;
+}
+
+.btn-bo-loc {
+    margin-left: auto !important; /* Ép nằm ngoài cùng bên phải */
+    border: 1.5px solid #d70018 !important;
+    color: #d70018 !important;
+    border-radius: 25px !important;
+    padding: 8px 22px !important;
+    font-weight: 800 !important;
+    background: #fff !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
