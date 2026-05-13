@@ -3,10 +3,22 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="viewport" content="width=1240">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<title>QUÂN LAN MOBILE</title>
+	<title>QUÂN LAN MOBILE | Điện thoại, Phụ kiện chính hãng giá rẻ</title>
+	<meta name="description" content="QUÂN LAN MOBILE - Hệ thống bán lẻ điện thoại di động, phụ kiện chính hãng giá rẻ nhất. Hỗ trợ trả góp 0%, giao hàng nhanh toàn quốc.">
+	<meta name="keywords" content="điện thoại, smartphone, phụ kiện, quan lan mobile, giá rẻ, iphone, samsung, oppo">
+	<meta name="author" content="QUÂN LAN MOBILE">
+	<link rel="canonical" href="https://quanlanmobile.com.vn/" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://quanlanmobile.com.vn/">
+	<meta property="og:title" content="QUÂN LAN MOBILE | Điện thoại, Phụ kiện chính hãng giá rẻ">
+	<meta property="og:description" content="Hệ thống bán lẻ điện thoại di động, phụ kiện chính hãng giá rẻ nhất. Hỗ trợ trả góp 0%, giao hàng nhanh toàn quốc.">
+	<meta property="og:image" content="assets/img/logo.png">
+
 	<link rel="shortcut icon" href="assets/img/favicon.ico" />
 
 	<!-- Load font awesome icons -->
@@ -35,6 +47,7 @@
 	<link rel="stylesheet" href="css/taikhoan.css">
 	<link rel="stylesheet" href="css/trangchu.css">
 	<link rel="stylesheet" href="css/home_products.css">
+	<link rel="stylesheet" href="css/homepage_polish.css">
 	<link rel="stylesheet" href="css/pagination_phantrang.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/responsive.css">
@@ -58,25 +71,20 @@
 
 		<img src="assets/img/banners/blackFriday.gif" alt="" class="banner-extra">
 
-		<div class="content-wrap">
-			<nav id="breadcrumb-wrap" class="breadcrumb-wrap"></nav>
-			<div class="page-title-block">
-				<h1 class="page-title"># Điện thoại</h1>
-				<p class="page-title-desc">Điện thoại chính hãng, giá tốt, trả góp 0%</p>
+		<div class="content-wrap premium-container">
+			<div class="companyMenu group flexContain">
+				<h3 class="companyMenu-title">Các hãng điện thoại</h3>
 			</div>
-			<div class="companyMenu group flexContain"></div>
 
 			<!-- Chọn theo nhu cầu (CellphoneS) -->
 			<div class="nhu-cau-section">
 				<h3 class="nhu-cau-title">Chọn theo nhu cầu</h3>
 				<div class="nhu-cau-tags">
-					<a href="index.html?group=noi_bat_nhat">Điện thoại chơi game</a>
-					<a href="index.html?group=gia_re">Điện thoại pin trâu</a>
-					<a href="index.html?search=5G">Điện thoại 5G</a>
-					<a href="index.html?search=camera">Chụp ảnh đẹp</a>
-					<a href="index.html?promo=moiramat">Điện thoại gập</a>
-					<a href="index.html?promo=tragop">Trả góp 0%</a>
-					<a href="index.html?group=gia_re">Điện thoại phổ thông</a>
+					<a href="index.html?group=noi_bat_nhat#products"><i class="fa fa-gamepad"></i> Điện thoại chơi game</a>
+					<a href="index.html?group=gia_re#products"><i class="fa fa-battery-full"></i> Điện thoại pin trâu</a>
+					<a href="index.html?search=5G#products"><i class="fa fa-bolt"></i> Điện thoại 5G</a>
+					<a href="index.html?search=camera#products"><i class="fa fa-camera-retro"></i> Chụp ảnh đẹp</a>
+					<a href="index.html?promo=tragop#products"><i class="fa fa-credit-card"></i> Trả góp 0%</a>
 				</div>
 			</div>
 
@@ -84,45 +92,49 @@
 			<div class="sort-and-filter-bar">
 				<div class="sort-tabs" id="sort-tabs">
 					<span class="sort-label">Sắp xếp theo</span>
-					<a href="index.html" class="sort-tab active">Phổ biến</a>
-					<a href="index.html?sort=rateCount-decrease" class="sort-tab">Khuyến mãi HOT</a>
-					<a href="index.html?sort=price-ascending" class="sort-tab">Giá Thấp - Cao</a>
-					<a href="index.html?sort=price-decrease" class="sort-tab">Giá Cao - Thấp</a>
+					<a href="index.html" class="sort-tab active"><i class="fa fa-home" style="margin-right: 5px;"></i> Trang chủ</a>
+					<a href="index.html?sort=rateCount-decrease#products" class="sort-tab">Khuyến mãi HOT</a>
+					<a href="index.html?sort=price-ascending#products" class="sort-tab">Giá Thấp - Cao</a>
+					<a href="index.html?sort=price-decrease#products" class="sort-tab">Giá Cao - Thấp</a>
 				</div>
 				<button type="button" class="btn-bo-loc" id="btn-bo-loc" onclick="toggleFilterPanel()"><i class="fa fa-filter"></i> Bộ lọc</button>
 			</div>
 
-			<!-- Panel bộ lọc (slide) -->
-			<div class="filter-panel-overlay" id="filter-panel-overlay" onclick="toggleFilterPanel()"></div>
-			<div class="filter-panel" id="filter-panel">
-				<div class="filter-panel-header">
-					<h3>Bộ lọc</h3>
-					<button type="button" class="filter-panel-close" onclick="toggleFilterPanel()">&times;</button>
+			<!-- ===== SẮM THÊM PHỤ KIỆN CHẤT LƯỢNG ===== -->
+			<div class="phu-kien-section phu-kien-inline">
+				<div class="phu-kien-header">
+					<h2 class="phu-kien-title">SẮM THÊM PHỤ KIỆN CHẤT LƯỢNG</h2>
+					<a href="index.html?search=phụ kiện#products" class="phu-kien-viewall">Xem tất cả <i class="fa fa-angle-right"></i></a>
 				</div>
-				<div class="filter-panel-body">
-					<div class="filter-panel-group">
-						<h4>Khoảng giá</h4>
-						<div class="pricesRangeFilter dropdown"><button class="dropbtn">Chọn mức giá</button><div class="dropdown-content"></div></div>
-					</div>
-					<div class="filter-panel-group">
-						<h4>Trạng thái hàng</h4>
-						<a href="index.html" class="filter-chip">Sẵn hàng</a>
-						<a href="index.html?promo=moiramat" class="filter-chip">Hàng mới về</a>
-					</div>
-					<div class="filter-panel-group">
-						<h4>Khuyến mãi</h4>
-						<div class="promosFilter dropdown"><button class="dropbtn">Chọn khuyến mãi</button><div class="dropdown-content"></div></div>
-					</div>
-					<div class="filter-panel-group">
-						<h4>Số sao</h4>
-						<div class="starFilter dropdown"><button class="dropbtn">Chọn số sao</button><div class="dropdown-content"></div></div>
-					</div>
+				<div class="phu-kien-grid" id="phu-kien-grid">
+					<a href="index.html?company=Apple#products" class="phu-kien-item" title="Phụ kiện Apple"><div class="phu-kien-icon"><i class="fa fa-apple"></i></div><span>Phụ kiện Apple</span></a>
+					<a href="index.html?search=sạc#products" class="phu-kien-item" title="Cáp, sạc"><div class="phu-kien-icon"><i class="fa fa-plug"></i></div><span>Cáp, sạc</span></a>
+					<a href="index.html?search=pin#products" class="phu-kien-item" title="Pin sạc dự phòng"><div class="phu-kien-icon"><i class="fa fa-battery-three-quarters"></i></div><span>Pin sạc dự phòng</span></a>
+					<a href="index.html?search=ốp lưng#products" class="phu-kien-item" title="Ốp lưng - Bao da"><div class="phu-kien-icon"><i class="fa fa-shield"></i></div><span>Ốp lưng - Bao da</span></a>
+					<a href="index.html?search=màn hình#products" class="phu-kien-item" title="Dán màn hình"><div class="phu-kien-icon"><i class="fa fa-tablet"></i></div><span>Dán màn hình</span></a>
+					<a href="index.html?search=USB#products" class="phu-kien-item" title="Thẻ nhớ, USB"><div class="phu-kien-icon"><i class="fa fa-hdd-o"></i></div><span>Thẻ nhớ, USB</span></a>
+					<a href="index.html?group=choi_game#products" class="phu-kien-item" title="Gaming Gear, Playstation"><div class="phu-kien-icon"><i class="fa fa-gamepad"></i></div><span>Gaming Gear, Playstation</span></a>
+					<a href="index.html?search=5G#products" class="phu-kien-item" title="Sim 4G - 5G"><div class="phu-kien-icon"><i class="fa fa-signal"></i></div><span>Sim 4G - 5G</span></a>
+					
+					<!-- Items to hide initially (from 9th) -->
+					<a href="index.html?search=mạng#products" class="phu-kien-item extra-item" title="Thiết bị mạng"><div class="phu-kien-icon"><i class="fa fa-wifi"></i></div><span>Thiết bị mạng</span></a>
+					<a href="index.html?search=camera#products" class="phu-kien-item extra-item" title="Camera"><div class="phu-kien-icon"><i class="fa fa-camera"></i></div><span>Camera</span></a>
+					<a href="index.html?search=gimbal#products" class="phu-kien-item extra-item" title="Gimbal"><div class="phu-kien-icon"><i class="fa fa-video-camera"></i></div><span>Gimbal</span></a>
+					<a href="index.html?search=flycam#products" class="phu-kien-item extra-item" title="Flycam"><div class="phu-kien-icon"><i class="fa fa-paper-plane"></i></div><span>Flycam</span></a>
+					<a href="index.html?search=máy ảnh#products" class="phu-kien-item extra-item" title="Máy ảnh"><div class="phu-kien-icon"><i class="fa fa-camera-retro"></i></div><span>Máy ảnh</span></a>
+					<a href="index.html?search=bàn phím#products" class="phu-kien-item extra-item" title="Chuột, bàn phím"><div class="phu-kien-icon"><i class="fa fa-keyboard-o"></i></div><span>Chuột, bàn phím</span></a>
+					<a href="index.html?search=balo#products" class="phu-kien-item extra-item" title="Balo, túi xách"><div class="phu-kien-icon"><i class="fa fa-briefcase"></i></div><span>Balo, túi xách</span></a>
+					<a href="index.html?search=hub#products" class="phu-kien-item extra-item" title="Hub chuyển đổi"><div class="phu-kien-icon"><i class="fa fa-exchange"></i></div><span>Hub chuyển đổi</span></a>
+					<a href="index.html?search=phụ kiện điện thoại#products" class="phu-kien-item extra-item" title="Phụ kiện điện thoại"><div class="phu-kien-icon"><i class="fa fa-mobile"></i></div><span>Phụ kiện điện thoại</span></a>
+					<a href="index.html?search=laptop#products" class="phu-kien-item extra-item" title="Phụ kiện Laptop"><div class="phu-kien-icon"><i class="fa fa-laptop"></i></div><span>Phụ kiện Laptop</span></a>
 				</div>
-				<div class="filter-panel-footer">
-					<button type="button" class="btn-close-panel" onclick="toggleFilterPanel()">Đóng</button>
-					<a href="index.html" class="btn-view-result">Xem kết quả</a>
+				<div class="phu-kien-view-more">
+					<button type="button" id="btn-expand-phu-kien" onclick="expandPhuKien()">Xem tất cả <i class="fa fa-angle-down"></i></button>
 				</div>
 			</div>
+			<!-- ===== END PHỤ KIỆN INLINE ===== -->
+
+			<!-- Panel bộ lọc (slide) -->
 
 			<div class="filter-bar flexContain" style="margin-top:0.5rem;">
 				<div class="pricesRangeFilter dropdown">
@@ -143,27 +155,32 @@
 				</div>
 			</div>
 
-			<div class="choosedFilter flexContain">
-				<a id="deleteAllFilter" style="display: none;">
-					<h3>Xóa bộ lọc</h3>
-				</a>
-			</div>
-
 			<!-- Khi có bộ lọc mới hiện -->
 			<div class="contain-products" style="display:none">
-				<div class="filterName">
-					<input type="text" placeholder="Lọc trong trang theo tên..." onkeyup="filterProductsName(this)">
+				<div class="choosedFilter flexContain">
+					<a id="deleteAllFilter" style="display: none;">
+						<h3>Xóa bộ lọc</h3>
+					</a>
 				</div>
-				<ul id="products" class="homeproduct group flexContain">
-					<div id="khongCoSanPham">
-						<i class="fa fa-times-circle"></i>
-						Không có sản phẩm nào
+				<div class="filter-results-header">
+					<h2 class="filter-result-title" id="filter-result-title">Sản phẩm</h2>
+					<div class="filterName">
+						<input type="text" placeholder="Lọc trong trang theo tên..." onkeyup="filterProductsName(this)">
 					</div>
+				</div>
+				<div id="khongCoSanPham">
+					<i class="fa fa-times-circle"></i>
+					Không có sản phẩm nào
+				</div>
+				<div id="suggestionProducts"></div>
+				<ul id="products" class="homeproduct group">
 				</ul>
 				<div class="pagination"></div>
 			</div>
 
 			<div class="contain-khungSanPham"></div>
+
+
 
 			<!-- Bình luận / Đánh giá (kiểu CellphoneS) -->
 			<div class="comments-section">
@@ -217,6 +234,38 @@
 	</script>
 
 	<div class="footer"><script>addFooter();</script></div>
+
+	<!-- Panel bộ lọc (slide) - Chuyển xuống cuối body để không bị đè -->
+	<div class="filter-panel-overlay" id="filter-panel-overlay" onclick="toggleFilterPanel()"></div>
+	<div class="filter-panel" id="filter-panel">
+		<div class="filter-panel-header">
+			<h3>Bộ lọc</h3>
+			<button type="button" class="filter-panel-close" onclick="toggleFilterPanel()">&times;</button>
+		</div>
+		<div class="filter-panel-body">
+			<div class="filter-panel-group">
+				<h4>Khoảng giá</h4>
+				<div class="pricesRangeFilter dropdown"><button type="button" class="dropbtn" onclick="this.parentElement.classList.toggle('show')">Chọn mức giá</button><div class="dropdown-content"></div></div>
+			</div>
+			<div class="filter-panel-group">
+				<h4>Trạng thái hàng</h4>
+				<a href="javascript:void(0)" class="filter-chip" onclick="setStagedFilter('promo', '', this)">Sẵn hàng</a>
+				<a href="javascript:void(0)" class="filter-chip" onclick="setStagedFilter('promo', 'moiramat', this)">Hàng mới về</a>
+			</div>
+			<div class="filter-panel-group">
+				<h4>Khuyến mãi</h4>
+				<div class="promosFilter dropdown"><button type="button" class="dropbtn" onclick="this.parentElement.classList.toggle('show')">Chọn khuyến mãi</button><div class="dropdown-content"></div></div>
+			</div>
+			<div class="filter-panel-group">
+				<h4>Số sao</h4>
+				<div class="starFilter dropdown"><button type="button" class="dropbtn" onclick="this.parentElement.classList.toggle('show')">Chọn số sao</button><div class="dropdown-content"></div></div>
+			</div>
+		</div>
+		<div class="filter-panel-footer">
+			<button type="button" class="btn-close-panel" onclick="toggleFilterPanel()">Đóng</button>
+			<a href="javascript:void(0)" class="btn-view-result" onclick="applyStagedFilters()">Xem kết quả</a>
+		</div>
+	</div>
 </body>
 
 </html>

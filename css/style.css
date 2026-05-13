@@ -140,12 +140,16 @@ body {
     --z-negative:  -1;
     --z-base:       0;
     --z-raised:    10;
-    --z-dropdown: 300;
-    --z-sticky:   400;
-    --z-header:   500;
-    --z-fab:      600;
-    --z-modal:    800;
-    --z-alert:   1000;
+    --z-dropdown: 1000;
+    --z-sticky:   1100;
+    --z-header:   1200;
+    --z-fab:      1300;
+    --z-modal:    2000;
+    --z-alert:   3000;
+
+    /* --- Global Spacing Fix --- */
+    --header-height: 70px;
+    --top-nav-height: 36px;
 }
 /* ============================================================
    END DESIGN TOKEN 2026
@@ -164,7 +168,7 @@ body {
 html {
     width: 100%;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: calc(var(--header-height) + 20px);
     -webkit-text-size-adjust: 100%;
 }
 
@@ -180,6 +184,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     letter-spacing: -0.01em;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -217,8 +222,9 @@ button {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: var(--space-6) var(--space-6) var(--space-10);
+    padding: var(--space-4) var(--space-6) var(--space-10);
     min-height: 50vh;
+    box-sizing: border-box;
 }
 
 section {
@@ -694,10 +700,29 @@ hr {
 }
 .msg-form label {
     display: block;
-    font-size: var(--text-sm);
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: var(--text-body);
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-size: var(--text-md);
+    font-weight: 500;
+    margin-bottom: 0;
+    color: var(--gray-500);
+    transition: all 0.25s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Floating Label Active State */
+.msg-form .field-wrap {
+    position: relative;
+    margin-bottom: var(--space-6); /* Tăng khoảng cách giữa các hàng */
+}
+
+.msg-form .field-wrap label.active {
+    transform: translateY(-34px) scale(0.85);
+    transform-origin: left top;
+    color: var(--primary);
+    font-weight: 700;
 }
 .msg-form input, .msg-form textarea, .msg-form select {
     width: 100%;

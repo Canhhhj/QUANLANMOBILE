@@ -1,156 +1,141 @@
-/* START ADMIN MASTER POLISH - UNIFIED RESPONSIVE DESIGN */
+/* ============================================================
+   QUÂN LAN MOBILE — responsive.css (REVERTED TO STABLE)
+   QUAY LẠI TRẠNG THÁI ỔN ĐỊNH TRƯỚC KHI ÉP TRÀN 100VW
+   ============================================================ */
 
-/* =======================================================
-   1. DESIGN TOKENS (Shared across breakpoints)
-   ======================================================= */
-:root {
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 16px;
-    --space-lg: 24px;
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
+/* 1. BANNER MÀU TÍM TRÀN HẾT HAI BÊN MÀN HÌNH (KHÔNG HỞ LỀ) */
+.banner-extra {
+    width: 100vw !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: block !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.banner-extra img {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 0 !important;
 }
 
-/* =======================================================
-   2. TABLET & SMALL DESKTOP (≤ 1024px)
-   ======================================================= */
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 200px;
-    }
-    .main {
-        width: calc(100% - 200px);
-    }
+/* 2. GIỮ PHẦN HÃNG (TIÊU ĐỀ BÊN TRÁI) */
+.companyMenu {
+    display: flex !important;
+    align-items: center !important;
+    background: #f1f1f1 !important;
+    padding: 15px 20px !important;
+    border-radius: 15px !important;
+    margin: 15px 0 !important;
 }
 
-/* =======================================================
-   3. MOBILE LANDSCAPE & TABLET (≤ 768px)
-   ======================================================= */
-@media (max-width: 768px) {
-    /* ----- Admin Sidebar & Layout ----- */
-    .sidebar {
-        position: fixed;
-        left: -280px;
-        top: 0;
-        z-index: 9999;
-        height: 100vh;
-        width: 280px;
-        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 4px 0 15px rgba(0,0,0,0.1);
-    }
-    .sidebar.show {
-        left: 0;
-    }
-    .sidebar-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.5);
-        z-index: 9998;
-    }
-    .sidebar.show + .sidebar-overlay {
-        display: block;
-    }
-
-    .main {
-        width: 100% !important;
-        margin-left: 0 !important;
-        padding: 12px !important;
-    }
-
-    /* ----- Table to Card Transformation (Universal) ----- */
-    .table-outline { border: none !important; }
-    .table-header, .table-outline thead { display: none !important; }
-    
-    .table-outline tbody, 
-    .table-outline tr, 
-    .table-outline td { 
-        display: block !important; 
-        width: 100% !important; 
-    }
-
-    .table-outline tr {
-        background: var(--bg-card);
-        margin-bottom: 16px;
-        border-radius: var(--radius);
-        box-shadow: var(--shadow-soft);
-        overflow: hidden;
-        border: 1px solid #edf2f7;
-    }
-
-    .table-outline td {
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 15px !important;
-        border: none;
-        border-bottom: 1px solid #f7fafc !important;
-        font-size: 14px;
-        text-align: right !important;
-    }
-
-    .table-outline td:before {
-        content: attr(data-label) ":";
-        font-weight: 700;
-        color: var(--text-muted);
-        font-size: 11px;
-        text-transform: uppercase;
-        text-align: left;
-        width: 100px;
-        flex-shrink: 0;
-    }
-
-    .table-outline td:last-child {
-        background: #f8fafc;
-        justify-content: center;
-        padding: 15px !important;
-    }
-
-    /* ----- Dashboard & UI Elements ----- */
-    .home-stats, .executive-checklist {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-    }
-
-    .home-charts .canvasContainer {
-        flex: 1 1 100% !important;
-    }
-
-    /* ----- User UI: Header & Search ----- */
-    .header.group {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        padding: 8px 12px !important;
-    }
-    .header .logo { flex: 1; order: 1; }
-    .tools-member { flex: 0 0 auto; order: 2; gap: 12px; }
-    .header .search-header { flex: 0 0 100%; order: 3; margin-top: 8px; width: 100%; }
-
-    /* Product Grid */
-    ul.homeproduct, ul#products {
-        grid-template-columns: repeat(2, 1fr) !important;
-        padding: 8px !important;
-        gap: 8px !important;
-    }
-
-    .sanPham { padding: 0 !important; }
+.companyMenu-title {
+    flex: 0 0 auto !important;
+    font-weight: bold !important;
+    margin-right: 20px !important;
+    color: #333 !important;
+    font-size: 1rem !important;
 }
 
-/* =======================================================
-   4. SMALL MOBILE (≤ 480px)
-   ======================================================= */
-@media (max-width: 480px) {
-    .table-outline td {
-        font-size: 13px;
-        padding: 10px !important;
-    }
-    .table-outline td:before {
-        width: 80px;
-        font-size: 10px;
-    }
-    .header .logo-name { font-size: 14px !important; }
+.companyMenu a {
+    flex: 1 !important;
+    background: #fff !important;
+    height: 45px !important;
+    margin: 0 3px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 }
 
-/* END ADMIN MASTER POLISH - UNIFIED RESPONSIVE DESIGN */
+.companyMenu a img { max-height: 25px !important; }
+
+/* 3. GIỮ PHẦN NHU CẦU ĐÃ LÀM ĐẸP */
+.choon-nhu-cau-title {
+    font-weight: bold !important;
+    margin: 20px 0 10px 0 !important;
+    font-size: 1rem !important;
+}
+
+.choon-nhu-cau {
+    display: flex !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+}
+
+.nhu-cau-item {
+    background: #f8f9fa !important;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    border: 1px solid #eee !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+}
+
+.nhu-cau-item i, .nhu-cau-item img {
+    color: #d70018 !important;
+}
+
+/* KHỬ KHOẢNG TRẮNG BÊN PHẢI */
+body { overflow-x: hidden !important; }
+.sanPham { flex: 0 0 calc(20% - 15px) !important; }
+
+/* 4. THANH SẮP XẾP & BỘ LỌC */
+.sort-and-filter-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important; /* Đẩy bộ lọc sang phải */
+    padding: 15px 0 !important;
+    width: 100% !important;
+}
+
+.sort-tabs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.sort-label {
+    font-weight: 800 !important; /* In đậm chữ Sắp xếp theo */
+    margin-right: 10px !important;
+    color: #333 !important;
+    font-size: 1rem !important;
+}
+
+.sort-tab {
+    padding: 8px 20px !important;
+    border-radius: 25px !important; /* Dạng viên thuốc */
+    background: #fff !important;
+    border: 1px solid #eee !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    color: #555 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.sort-tab.active {
+    background: #d70018 !important;
+    color: #fff !important;
+    border-color: #d70018 !important;
+    box-shadow: 0 4px 10px rgba(215,0,24,0.2) !important;
+}
+
+.btn-bo-loc {
+    margin-left: auto !important; /* Ép nằm ngoài cùng bên phải */
+    border: 1.5px solid #d70018 !important;
+    color: #d70018 !important;
+    border-radius: 25px !important;
+    padding: 8px 22px !important;
+    font-weight: 800 !important;
+    background: #fff !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}

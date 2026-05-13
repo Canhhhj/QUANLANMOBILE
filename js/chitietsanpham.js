@@ -227,12 +227,14 @@ function addKhungSanPham(list_sanpham, tenKhung, color, ele) {
 	// mở tag
 	var s = `<div class="khungSanPham" style="` + borderColor + `">
 				<h3 class="tenKhung" style="` + gradient + `">* ` + tenKhung + ` *</h3>
-				<div class="listSpTrongKhung flexContain">`;
+				<ul class="listSpTrongKhung">`;
 
 	for (var i = 0; i < list_sanpham.length; i++) {
 		s += addProduct(list_sanpham[i], null, true);
 		// truyền vào 'true' để trả về chuỗi rồi gán vào s
 	}
+
+    s += `</ul></div>`;
 
 	// thêm khung vào contain-khung
 	ele.innerHTML += s;
@@ -293,7 +295,7 @@ function suggestion(){
     // Lấy ra 10 sản phẩm đầu tiên
     .slice(0, 10);
 
-    console.log(sanPhamTuongTu)
+
 
     // ====== Hiển thị 5 sản phẩm lên web ====== 
     if(sanPhamTuongTu.length) {

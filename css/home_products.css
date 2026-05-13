@@ -6,30 +6,80 @@
 	font-size: 1.2rem;
 	font-weight: 600;
 	text-align: center;
-    padding: 50px 0;
+    padding: 50px 0 20px;
+}
+
+#suggestionProducts {
+	display: none;
+	width: 100%;
+	margin-top: 20px;
+	border-top: 2px dashed #eee;
+	padding-top: 30px;
+}
+
+.suggestion-header {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.suggestion-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #333;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.suggestion-title i {
+	color: #f59e0b;
 }
 
 /* START PRODUCT LAYOUT FIX */
+/* Filter Results Grid (Stretches to fill if few items) */
 .homeproduct {
-	list-style-type: none;
-	display: grid;
-    grid-template-columns: repeat(4, 1fr);
-	gap: 16px;
-	padding: 5px; /* Thêm padding tránh cắt mờ shadow */
-	margin: 0 0 40px;
+	list-style-type: none !important;
+	display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
+	gap: 15px !important; 
+	padding: 15px 0 !important;
+	margin: 0 0 30px 0 !important;
+    padding-left: 0 !important; /* Explicitly clear list padding */
+    margin-left: 0 !important;
     align-items: stretch;
+    justify-content: stretch !important; /* Stretch to fill gaps */
+    width: 100% !important;
 }
 
-@media (max-width: 992px) {
-    .homeproduct { grid-template-columns: repeat(3, 1fr); }
+/* Homepage Product Groups (Fixed 5-column maximum) */
+.listSpTrongKhung {
+	list-style-type: none !important;
+	display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+	gap: 15px !important; 
+	padding: 15px 0 !important;
+	margin: 0 0 30px 0 !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    align-items: stretch;
+    width: 100% !important;
+}
+
+.homeproduct li, .listSpTrongKhung .sanPham {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 1024px) {
+    .homeproduct, .listSpTrongKhung { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important; }
 }
 
 @media (max-width: 768px) {
-	.homeproduct { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+	.homeproduct, .listSpTrongKhung { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important; gap: 10px !important; }
 }
 
-@media (max-width: 500px) {
-	.homeproduct { grid-template-columns: repeat(1, 1fr); gap: 10px; }
+@media (max-width: 480px) {
+	.homeproduct, .listSpTrongKhung { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
 }
 /* END PRODUCT LAYOUT FIX */
 

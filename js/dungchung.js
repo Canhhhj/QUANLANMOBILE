@@ -32,10 +32,23 @@ function fixImagePath(path) {
 }
 
 
+
 // Hàm khởi tạo, tất cả các trang đều cần
 function khoiTao() {
     // get data từ localstorage
-    list_products = getListProducts() || list_products;
+    var localProducts = getListProducts();
+    if (localProducts) {
+        // Hợp nhất dữ liệu: thêm các sản phẩm mới từ file vào localstorage nếu chưa có
+        for(var spFile of list_products) {
+            var exists = localProducts.some(p => p.masp === spFile.masp);
+            if(!exists) localProducts.push(spFile);
+        }
+        list_products = localProducts;
+        setListProducts(list_products); // Lưu lại bản đã hợp nhất
+    } else {
+        setListProducts(list_products);
+    }
+    
     adminInfo = getListAdmin() || adminInfo;
 
     // Đồng bộ nhóm hiển thị (groups) cho toàn bộ sản phẩm cũ
@@ -758,11 +771,11 @@ function addTags(nameTag, link) {
 }
 
 // Thêm sản phẩm vào trang
-function addProduct(p, ele, returnString) {
+function addProduct(p, ele, returnString, extraClass) {
 	promo = new Promo(p.promo.name, p.promo.value); // class Promo
 	product = new Product(p.masp, p.name, p.img, p.price, p.star, p.rateCount, promo); // Class product
 
-	return addToWeb(product, ele, returnString);
+	return addToWeb(product, ele, returnString, extraClass);
 }
 
 // Thêm topnav vào trang (đầy đủ kiểu CellphoneS)
@@ -878,8 +891,14 @@ function addFooter() {
 
     <!-- FAB Lên đầu + Liên hệ (mọi trang) -->
     <div class="fab-wrap">
-        <a href="#" class="fab fab-top" onclick="(typeof gotoTop === 'function' ? gotoTop() : window.scrollTo(0,0)); return false;" title="Lên đầu trang"><i class="fa fa-arrow-up"></i> Lên đầu</a>
-        <a href="javascript:void(0)" class="fab fab-contact" onclick="openMessageModal()" title="Hỏi đáp / Liên hệ"><i class="fa fa-comments"></i> Hỏi đáp</a>
+        <a href="javascript:void(0)" class="fab fab-top" onclick="gotoTop(); return false;" title="Lên đầu trang">
+            <i class="fa fa-chevron-up"></i>
+            <span>Lên đầu</span>
+        </a>
+        <a href="javascript:void(0)" class="fab fab-contact" onclick="openMessageModal()" title="Hỏi đáp / Liên hệ">
+            <i class="fa fa-commenting-o"></i>
+            <span>Hỏi đáp</span>
+        </a>
     </div>
 
     <!-- ============== Footer đầy đủ CellphoneS ============= -->
@@ -975,9 +994,27 @@ function openMessageModal(productId = null) {
     // Show modal with animation
     setTimeout(() => {
         const modal = document.getElementById('containMessage');
-        if (modal) modal.classList.add('show');
+        if (modal) {
+            modal.classList.add('show');
+            updateFloatingLabels(modal);
+        }
         document.body.style.overflow = 'hidden'; // Lock scroll
     }, 10);
+}
+
+// Function to handle floating labels state
+function updateFloatingLabels(container) {
+    const inputs = container.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        const label = input.previousElementSibling;
+        if (label && label.tagName === 'LABEL') {
+            if (input.value !== '' || input.placeholder !== '') {
+                label.classList.add('active');
+            } else {
+                label.classList.remove('active');
+            }
+        }
+    });
 }
 
 function renderMessageModal(productData) {
@@ -1342,45 +1379,37 @@ function getThongTinSanPhamFrom_TheGioiDiDong() {
     })();
 }
 
-// $('.taikhoan').find('input').on('keyup blur focus', function (e) {
+// ==================== Floating Label Logic ===================== 
+document.addEventListener('focusin', function (e) {
+    if (e.target.closest('.field-wrap')) {
+        const label = e.target.previousElementSibling;
+        if (label && label.tagName === 'LABEL') {
+            label.classList.add('active', 'highlight');
+        }
+    }
+});
 
-//     var $this = $(this),
-//         label = $this.prev('label');
+document.addEventListener('focusout', function (e) {
+    if (e.target.closest('.field-wrap')) {
+        const label = e.target.previousElementSibling;
+        if (label && label.tagName === 'LABEL') {
+            label.classList.remove('highlight');
+            if (e.target.value === '') {
+                label.classList.remove('active');
+            }
+        }
+    }
+});
 
-//     if (e.type === 'keyup') {
-//         if ($this.val() === '') {
-//             label.removeClass('active highlight');
-//         } else {
-//             label.addClass('active highlight');
-//         }
-//     } else if (e.type === 'blur') {
-//         if ($this.val() === '') {
-//             label.removeClass('active highlight');
-//         } else {
-//             label.removeClass('highlight');
-//         }
-//     } else if (e.type === 'focus') {
-
-//         if ($this.val() === '') {
-//             label.removeClass('highlight');
-//         } else if ($this.val() !== '') {
-//             label.addClass('highlight');
-//         }
-//     }
-
-// });
-
-// $('.tab a').on('click', function (e) {
-
-//     e.preventDefault();
-
-//     $(this).parent().addClass('active');
-//     $(this).parent().siblings().removeClass('active');
-
-//     target = $(this).attr('href');
-
-//     $('.tab-content > div').not(target).hide();
-
-//     $(target).fadeIn(600);
-
-// });
+document.addEventListener('keyup', function (e) {
+    if (e.target.closest('.field-wrap')) {
+        const label = e.target.previousElementSibling;
+        if (label && label.tagName === 'LABEL') {
+            if (e.target.value !== '') {
+                label.classList.add('active');
+            } else {
+                label.classList.remove('active');
+            }
+        }
+    }
+});

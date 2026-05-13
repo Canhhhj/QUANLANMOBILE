@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /js/
+Disallow: /css/
+Disallow: /data/
+
+Sitemap: https://quanlanmobile.com.vn/sitemap.xml

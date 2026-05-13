@@ -1,5 +1,5 @@
 var list_products = [{
-    "name": "SamSung Galaxy J4+",
+    "name": "SamSung Galaxy J4+ 5G",
     "company": "Samsung",
     "img": "assets/img/products/samsung-galaxy-j4-plus-pink-400x400.jpg",
     "price": "3.490.000",
@@ -22,12 +22,12 @@ var list_products = [{
     },
     "masp": "Sam0"
 }, {
-    "name": "Xiaomi Mi 8 Lite",
+    "name": "Xiaomi Mi 8 Lite Camera Pro",
     "company": "Xiaomi",
     "img": "assets/img/products/xiaomi-mi-8-lite-black-1-600x600.jpg",
     "price": "6.690.000",
-    "star": 0,
-    "rateCount": 0,
+    "star": 4,
+    "rateCount": 12,
     "promo": {
         "name": "tragop",
         "value": "0"
@@ -1147,4 +1147,44 @@ var list_products = [{
         "battery": "3340 mAh"
     },
     "masp": "Hua3"
+}, {
+    "name": "HTC U12 Life Camera AI",
+    "company": "HTC",
+    "img": "https://cdn.tgdd.vn/Products/Images/42/190822/htc-u12-life-1-600x600.jpg",
+    "price": "6.890.000",
+    "star": 4,
+    "rateCount": 15,
+    "promo": { "name": "moiramat", "value": "" },
+    "detail": { "screen": "6.0', Full HD+", "os": "Android 8.1", "camara": "16 MP & 5 MP", "camaraFront": "13 MP", "cpu": "Snapdragon 636", "ram": "4 GB", "rom": "64 GB", "microUSB": "Có", "battery": "3600 mAh" },
+    "masp": "Htc0"
+}, {
+    "name": "Motorola Moto G6 5G Ready",
+    "company": "Motorola",
+    "img": "https://cdn.tgdd.vn/Products/Images/42/155357/motorola-moto-g6-1-600x600.jpg",
+    "price": "4.290.000",
+    "star": 4,
+    "rateCount": 8,
+    "promo": { "name": "giamgia", "value": "300.000" },
+    "detail": { "screen": "5.7', Full HD+", "os": "Android 8.0", "camara": "12 MP & 5 MP", "camaraFront": "8 MP", "cpu": "Snapdragon 450", "ram": "3 GB", "rom": "32 GB", "microUSB": "Có", "battery": "3000 mAh" },
+    "masp": "Moto0"
+}, {
+    "name": "Coolpad N3 Gập Phổ Thông",
+    "company": "Coolpad",
+    "img": "https://cdn.tgdd.vn/Products/Images/42/195433/coolpad-n3-blue-600x600.jpg",
+    "price": "1.390.000",
+    "star": 4,
+    "rateCount": 20,
+    "promo": { "name": "moiramat", "value": "" },
+    "detail": { "screen": "5.45', HD+", "os": "Android Go", "camara": "5 MP", "camaraFront": "2 MP", "cpu": "MT6580", "ram": "1 GB", "rom": "16 GB", "microUSB": "Có", "battery": "2300 mAh" },
+    "masp": "Cool0"
+}, {
+    "name": "Itel It5626 Siêu Bền",
+    "company": "Itel",
+    "img": "https://cdn.tgdd.vn/Products/Images/42/210214/itel-it5626-600x600.jpg",
+    "price": "450.000",
+    "star": 5,
+    "rateCount": 100,
+    "promo": { "name": "giamgia", "value": "50.000" },
+    "detail": { "screen": "2.8', QVGA", "os": "Feature phone", "camara": "0.3 MP", "camaraFront": "Không", "cpu": "Không", "ram": "8 MB", "rom": "8 MB", "microUSB": "Có", "battery": "2500 mAh" },
+    "masp": "Itel0"
 }]

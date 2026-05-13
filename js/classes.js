@@ -64,7 +64,7 @@ function parsePrice(s) {
 }
 // END COMMERCIAL AUDIT
 
-function addToWeb(p, ele, returnString) {
+function addToWeb(p, ele, returnString, extraClass) {
 	// Rating HTML
 	var rating = "";
 	if (p.rateCount > 0) {
@@ -119,12 +119,12 @@ function addToWeb(p, ele, returnString) {
 	var chitietSp = 'chitietsanpham.html?' + p.name.split(' ').join('-');
 
 	var newLi =
-	`<li class="sanPham cps-card">
+	`<li class="sanPham cps-card ` + (extraClass || '') + `">
 		<a href="` + chitietSp + `">
 			<div class="cps-card-image-wrap">
 				` + statusBadge + `
 				` + badgeHtml + `
-				<img src="` + fixImagePath(p.img) + `" alt="">
+				<img src="` + fixImagePath(p.img) + `" alt="` + p.name + `" loading="lazy">
 			</div>
 			<h3 class="cps-card-name">` + p.name + `</h3>
 			<div class="cps-price-block">
@@ -133,11 +133,11 @@ function addToWeb(p, ele, returnString) {
 			</div>
 			<p class="cps-tragop">` + tragopText + `</p>
 			<div class="cps-card-footer">
-				<span class="ratingresult">` + rating + `</span>
-				<span class="cps-yeuthich"><i class="fa fa-heart-o"></i> Yêu thích</span>
+				<span class="ratingresult" aria-label="Đánh giá ` + p.star + ` sao">` + rating + `</span>
+				<span class="cps-yeuthich" role="button" aria-label="Thêm vào danh sách yêu thích"><i class="fa fa-heart-o"></i> Yêu thích</span>
 			</div>
 			<div class="tooltip">
-				<button class="themvaogio" onclick="themVaoGioHang('`+p.masp+`', '`+p.name+`'); return false;">
+				<button class="themvaogio" aria-label="Thêm ` + p.name + ` vào giỏ hàng" onclick="themVaoGioHang('`+p.masp+`', '`+p.name+`'); return false;">
 					<span class="tooltiptext">Thêm vào giỏ</span>
 					+
 				</button>

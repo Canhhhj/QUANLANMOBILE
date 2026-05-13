@@ -89,9 +89,10 @@
     z-index: var(--z-header);
     background: var(--primary);
     width: 100%;
+    min-height: var(--header-height);
     box-shadow: 0 2px 20px rgba(180,0,18,0.35), 0 1px 4px rgba(0,0,0,0.2);
     backface-visibility: hidden;
-    transition: box-shadow var(--transition-base);
+    transition: all var(--transition-base);
 }
 
 .header-full.scrolled {
@@ -254,8 +255,8 @@ body {
 }
 .search-header {
     flex: 1;
-    max-width: 440px;
-    min-width: 0;
+    max-width: 500px;
+    min-width: 200px;
 }
 form.input-search {
     display: flex;
