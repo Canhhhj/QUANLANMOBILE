@@ -31,7 +31,13 @@ window.onload = function () {
 		loop: true,
 		smartSpeed: 450,
 		autoplay: true,
-		autoplayTimeout: 3500
+		autoplayTimeout: 3500,
+		responsive: {
+			0: { items: 1, margin: 16, center: true },
+			480: { items: 1.1, margin: 32, center: true },
+			768: { items: 1.25, margin: 56, center: true },
+			1024: { items: 1.5, margin: 100, center: true }
+		}
 	});
 
 	// autocomplete cho khung tim kiem

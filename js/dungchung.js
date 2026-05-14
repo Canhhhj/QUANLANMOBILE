@@ -823,7 +823,7 @@ function addHeader() {
                     </a>
                 </div>
                 <div class="header-category dropdown">
-                    <button class="dropbtn category-btn"><i class="fa fa-th-list"></i> Danh mục</button>
+                    <button class="dropbtn category-btn"><i class="fa fa-th-list"></i> <span class="category-btn-label">Danh mục</span></button>
                     <div class="dropdown-content dropdown-category">
                         <a href="index.html"><i class="fa fa-mobile"></i> Điện thoại</a>
                         <a href="index.html?promo=tragop"><i class="fa fa-credit-card"></i> Trả góp 0%</a>
@@ -839,7 +839,7 @@ function addHeader() {
                                 <input id="search-box" name="search" autocomplete="off" type="text" placeholder="Nhập từ khóa tìm kiếm...">
                                 <button type="submit">
                                     <i class="fa fa-search"></i>
-                                    Tìm kiếm
+                                    <span class="header-search-btn-label">Tìm kiếm</span>
                                 </button>
                             </div>
                         </form>
@@ -851,7 +851,7 @@ function addHeader() {
                         <div class="member">
                             <a onclick="checkTaiKhoan()">
                                 <i class="fa fa-user"></i>
-                                Tài khoản
+                                <span class="header-tool-label">Tài khoản</span>
                             </a>
                             <div class="menuMember hide">
                                 <a href="nguoidung.html">Trang người dùng</a>
@@ -860,19 +860,19 @@ function addHeader() {
                         </div>
                         <a href="yeuthich.html" class="header-wishlist" title="Sản phẩm yêu thích">
                             <i class="fa fa-heart-o"></i>
-                            <span>Yêu thích</span>
+                            <span class="header-tool-label">Yêu thích</span>
                             <span class="wishlist-number">0</span>
                         </a>
                         <div class="cart">
                             <a href="giohang.html">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span>Giỏ hàng</span>
+                                <span class="header-tool-label">Giỏ hàng</span>
                                 <span class="cart-number"></span>
                             </a>
                         </div>
                         <a href="tel:0876008333" class="header-hotline">
                             <i class="fa fa-phone"></i>
-                            <span>0876 008 333</span>
+                            <span class="header-hotline-num">0876 008 333</span>
                         </a>
                     </div>
                 </div>
